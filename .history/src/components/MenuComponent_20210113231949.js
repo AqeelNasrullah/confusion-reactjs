@@ -5,7 +5,7 @@ class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedDish: null
+            selectDish: null
         };
     }
 
@@ -14,7 +14,7 @@ class Menu extends Component {
     }
 
     renderDish(dish) {
-        if (dish != null) {
+        if (dish != null)
             return(
                 <Card>
                     <CardImg top src={dish.image} alt={dish.name} />
@@ -24,11 +24,10 @@ class Menu extends Component {
                     </CardBody>
                 </Card>
             );
-        } else {
+        else
             return(
                 <div></div>
             );
-        }
     }
 
     render() {
