@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Menu from './MenuComponent';
-import DishDetail from "./DishDetailComponent";
 import Contact from './ContactComponent';
 import { DISHES } from '../shared/dishes';
 import { COMMENTS } from '../shared/comments';
@@ -26,6 +25,13 @@ class Main extends Component {
       onDishSelect(dishId) {
         this.setState({ selectedDish: dishId});
       }
+
+      const DishWithId = ({match}) => {
+        return(
+            <DishDetail dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
+              comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
+        );
+      };
     
       render() {
         const HomePage = () => {
@@ -37,13 +43,6 @@ class Main extends Component {
               />
           );
         }
-
-        const DishWithId = ({match}) => {
-          return(
-              <DishDetail dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
-                comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
-          );
-        };
 
         const AboutPage = () => {
           return(

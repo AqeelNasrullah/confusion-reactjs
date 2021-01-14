@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom';
                 return (
                     <li>
                         <p className="mb-0">{comment.comment}</p>
-                        <p>-- {comment.author} at {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+                        <p>{comment.author} at {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                     </li>
                 );
             });
@@ -46,6 +46,7 @@ import { Link } from 'react-router-dom';
                 <div className="container">
                     <div className="row">
                         <Breadcrumb>
+
                             <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
                             <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                         </Breadcrumb>
@@ -59,7 +60,7 @@ import { Link } from 'react-router-dom';
                             <RenderDish dish={props.dish} />
                         </div>
                         <div className="col-12 col-md-5 m-1">
-                            <RenderComments comments={props.comments} />
+                            <RenderComments comments={props.dish.comments} />
                         </div>
                     </div>
                 </div>
