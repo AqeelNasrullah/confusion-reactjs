@@ -18,9 +18,8 @@
 .jumbotron {
   padding:70px 30px 70px 30px;
   margin:0px auto;
-  background-color: #9575CD !important ;
+  background: #9575CD ;
   color:floralwhite;
-  border-radius: 0px !important;
 }
 
 address{
