@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 
 function RenderMenuItem ({dish, onClick}) {
