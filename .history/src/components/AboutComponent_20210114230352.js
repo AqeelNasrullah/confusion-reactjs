@@ -10,7 +10,7 @@ function RenderLeader({ leader }) {
       </Media>
       <Media body className="ml-5">
         <Media heading>{leader.name}</Media>
-        <p>{leader.designation} ({leader.abbr})</p>
+        <Media heading>{leader.designation} ({leader.abbr})</Media>
         <p>{leader.description}</p>
       </Media>
     </Media>
