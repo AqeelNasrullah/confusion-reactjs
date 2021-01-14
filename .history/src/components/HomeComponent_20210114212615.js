@@ -1,11 +1,11 @@
 import React from 'react';
 
-function About(props) {
+function Home(props) {
     return(
       <div className="container">
-        <h4>About</h4>
+        <h4>Home</h4>
       </div>
     );
 }
 
-export default About;   
+export default Home;   

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About(props) {
+function Home(props) {
     return(
       <div className="container">
         <h4>About</h4>
@@ -8,4 +8,4 @@ function About(props) {
     );
 }
 
-export default About;   
+export default Home;   

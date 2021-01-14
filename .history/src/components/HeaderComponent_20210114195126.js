@@ -26,9 +26,9 @@ class Header extends Component {
         <NavbarToggler onClick={this.toggleNav} />
         <NavbarBrand className="ml-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
         <Collapse isOpen={this.state.isNavOpen} navbar>
-            <Nav navbar className="ml-auto">
+            <Nav navbar>
               <NavItem>
-                  <NavLink className="nav-link" exact={true} to='/'><span className="fa fa-home fa-lg"></span> Home</NavLink>
+                  <NavLink className="nav-link"  to='/'><span className="fa fa-home fa-lg"></span> Home</NavLink>
               </NavItem>
               <NavItem>
                   <NavLink className="nav-link" to='/about'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
