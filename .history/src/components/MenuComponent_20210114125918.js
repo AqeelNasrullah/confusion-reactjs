@@ -2,6 +2,28 @@ import React, { Component } from "react";
 import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 
 class Menu extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedDish: null
+        };
+    }
+
+    onDishSelect(dish) {
+        this.setState({selectedDish: dish});
+    }
+
+    renderDish(dish) {
+        if (dish != null) {
+            return(
+                <DishDetail dish={dish} />
+            );
+        } else {
+            return(
+                <div></div>
+            );
+        }
+    }
 
     render() {
         const menu = this.props.dishes.map((dish) => {

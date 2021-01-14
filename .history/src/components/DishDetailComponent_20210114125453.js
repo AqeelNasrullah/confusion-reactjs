@@ -15,7 +15,7 @@ class DishDetail extends Component {
                 return (
                     <li>
                         <p className="mb-0">{comment.comment}</p>
-                        <p>{comment.author} at {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+                        <p>{comment.author} at {comment.date}</p>
                     </li>
                 );
             });
@@ -38,20 +38,18 @@ class DishDetail extends Component {
     render() {
         if (this.props.dish != null) {
             return (
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-md-5 m-1">
-                            <Card>
-                                <CardImg top src={this.props.dish.image} alt={this.props.dish.name} />
-                                <CardBody>
-                                    <CardTitle>{this.props.dish.name}</CardTitle>
-                                    <CardText>{this.props.dish.description}</CardText>
-                                </CardBody>
-                            </Card>
-                        </div>
-                        <div className="col-12 col-md-5 m-1">
-                            { this.renderComments(this.props.dish.comments) }
-                        </div>
+                <div className="row">
+                    <div className="col-12 col-md-5 m-1">
+                        <Card>
+                            <CardImg top src={this.props.dish.image} alt={this.props.dish.name} />
+                            <CardBody>
+                                <CardTitle>{this.props.dish.name}</CardTitle>
+                                <CardText>{this.props.dish.description}</CardText>
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className="col-12 col-md-5 m-1">
+                        { this.renderComments(this.props.dish.comments) }
                     </div>
                 </div>
             );
