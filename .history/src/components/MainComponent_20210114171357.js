@@ -30,11 +30,8 @@ class Main extends Component {
         return (
           <div>
             <Header />
-            <Switch>
-              <Route exact path='/' component={AboutPage} />
-              <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
-              <Redirect to="/" />
-            </Switch>
+            <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
+            <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />
             <Footer />
           </div>
         );

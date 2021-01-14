@@ -3,21 +3,6 @@ import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron }
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-
-    this.toggleNav = this.toggleNav.bind(this);
-    this.state = {
-      isNavOpen: false
-    };
-  }
-
-  toggleNav() {
-    this.setState({
-      isNavOpen: !this.state.isNavOpen
-    });
-  }
-
   render() {
     return(
     <React.Fragment>
@@ -37,7 +22,7 @@ class Header extends Component {
                   <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
               </NavItem>
               <NavItem>
-                  <NavLink className="nav-link" to='/contact'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+                  <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
               </NavItem>
             </Nav>
         </Collapse>
