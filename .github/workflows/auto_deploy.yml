@@ -30,7 +30,7 @@ jobs:
         run: npm run build
       
       - name: Installing surge
-        run: npm install --global surge
+        run: npm install -g surge
       
       - name: Deploying application on surge
         run: surge ./build confusion-reactjs-442.surge.sh --token ${{ secrets.SURGE_TOKEN }}
