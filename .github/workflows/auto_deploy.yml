@@ -1,14 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: ConFusion
+name: CI
 
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  
-  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -19,18 +19,20 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Install node modules
-        uses: actions/setup-node@v2
       
-      - name: Install dependencies
+      - name: Installing node modules
+        uses: actions/setup-node@v2
+        with:
+          version: 14
+      
+      - name: Installing dependencies
         run: npm install
       
-      - name: Building application
+      - name: Building project
         run: npm run build
       
       - name: Installing surge
-        run: npm install -g surge
+        run: npm install --global surge
       
       - name: Deploying application on surge
         run: surge ./build confusion-reactjs-442.surge.sh --token ${{ secrets.SURGE_TOKEN }}
