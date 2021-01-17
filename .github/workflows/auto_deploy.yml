@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Ristorante con Fusion
 
 # Controls when the action will run. 
 on:
@@ -23,7 +23,7 @@ jobs:
       - name: Installing node modules
         uses: actions/setup-node@v2
         with:
-          version: 14
+          node-version: 14
       
       - name: Installing dependencies
         run: npm install
