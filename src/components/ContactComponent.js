@@ -77,10 +77,7 @@ class Contact extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="telnum" md={2}>Contact Tel.</Label>
                                 <Col md={10}>
-                                    <Control.text model=".telnum" id="telnum"
-                                                  placeholder="Tel. Number"
-                                                  className="form-control"
-                                    />
+                                    <Control.text model=".telnum" id="telnum" placeholder="Tel. Number" className="form-control"/>
                                 </Col>
                             </Row>
                             <Row className="form-group">
