@@ -1,1 +1,4 @@
 export const ADD_COMMENT = 'ADD_COMMENT';
+export const DISHES_LOADING = 'DISHES_LOADING';
+export const DISHES_ERROR = 'DISHES_ERROR';
+export const DISHES_LOADED = 'DISHES_LOADED';
